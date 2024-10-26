@@ -4,6 +4,9 @@ body {
     padding: 0;
     font - family: Arial, sans - serif;
     background-color: #000;
+    /* 确保页面内容不超出屏幕宽度 */
+    width: 100vw;
+    overflow - x: hidden;
 }
 
 /* 顶部导航栏 */
@@ -14,6 +17,7 @@ body {
     background - color: #000;
     color: #fff;
     padding: 10px;
+    width: 100%;
 }
 
 .top - nav a {
@@ -28,17 +32,19 @@ body {
     flex - direction: column;
     align - items: center;
     margin - top: 20px;
+    width: 100%;
 }
 
 video {
-    width: 300px;
+    width: 100%;
     height: auto;
     border - radius: 10px;
+    max - width: 100%;
 }
 
 /* 视频描述和交互区域 */
 .video - info {
-    width: 300px;
+    width: 100%;
     text - align: center;
     margin - top: 10px;
     color: #fff;
@@ -52,6 +58,7 @@ video {
     display: flex;
     justify - content: space - around;
     margin - top: 10px;
+    width: 100%;
 }
 
 .video - actions img {
@@ -68,4 +75,11 @@ video {
 /* 点赞效果（模拟） */
 .liked {
     color: red;
+}
+
+/* 评论弹出层和分享弹出层 */
+#commentSection,
+#shareSection {
+    width: 80%;
+    max - width: 350px;
 }

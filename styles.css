@@ -1,96 +1,71 @@
-/* 全局样式重置 */
-* {
+/* 整体页面布局 */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font - family: Arial, sans - serif;
+    background-color: #000;
 }
 
-/* 导航栏样式优化 */
-header nav {
+/* 顶部导航栏 */
+.top - nav {
     display: flex;
-    justify-content: space - around;
-    background - color: #333;
+    justify - content: space - between;
+    align - items: center;
+    background - color: #000;
+    color: #fff;
     padding: 10px;
 }
 
-header nav a {
-    color: white;
+.top - nav a {
+    color: #fff;
     text - decoration: none;
+    margin - left: 10px;
 }
 
-/* 文章容器样式优化 */
-.article - container {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border - radius: 5px;
-}
-
-.article - container header h1 {
-    margin - bottom: 10px;
-}
-
-.article - container.section.content {
-    line - height: 1.5;
-}
-
-.article - container.section.content img {
-    max - width: 100%;
-    height: auto;
-    margin: 10px 0;
-}
-
-.article - container.section.content video,
-.article - container.section.content audio {
-    margin: 10px 0;
-}
-
-/* 底部样式优化 */
-footer {
+/* 视频区域 */
+.video - container {
+    display: flex;
+    flex - direction: column;
+    align - items: center;
     margin - top: 20px;
-    padding: 10px;
-    background - color: #eee;
+}
+
+video {
+    width: 300px;
+    height: auto;
+    border - radius: 10px;
+}
+
+/* 视频描述和交互区域 */
+.video - info {
+    width: 300px;
     text - align: center;
+    margin - top: 10px;
+    color: #fff;
 }
 
-footer.related - articles a {
-    margin: 0 10px;
+.video - info h3 {
+    margin - bottom: 5px;
 }
 
-/* 交互元素样式优化 */
-.interaction - buttons {
+.video - actions {
     display: flex;
     justify - content: space - around;
     margin - top: 10px;
 }
 
-.share - buttons img,
-.like - watch - button img,
-.comment - button img {
+.video - actions img {
     width: 30px;
     height: 30px;
 }
 
-/* 项目展示部分样式优化 */
-main.project {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border - radius: 5px;
+/* 点赞、评论、分享图标悬停效果 */
+.video - actions img:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
-main.project h2 {
-    margin - bottom: 10px;
+/* 点赞效果（模拟） */
+.liked {
+    color: red;
 }
-
-/* 表格样式优化 */
-table {
-    border - collapse: collapse;
-    width: 100%;
-}
-
-table tr th,
-table tr td {
-    border: 1px solid #ccc;
-    padding: 5px;
-    }

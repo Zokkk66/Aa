@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF - 8">
     <meta name="viewport" content="width=device - width, initial - scale = 1.0">
-    <title>抖音界面示例</title>
+    <title>佐罗斯视频专区</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -19,39 +18,41 @@
     </div>
     <!-- 视频区域 -->
     <div class="video - container">
-        <video controls id="videoPlayer">
-            <source src="example - video.mp4" type="video/mp4">
-            您的浏览器不支持视频标签，请更换浏览器查看。
-        </video>
-        <!-- 视频描述和交互区域 -->
-        <div class="video - info">
-            <h3>这是一个示例视频标题</h3>
-            <p>这是视频的简短描述。</p>
+        <div class="video - item">
+            <video controls>
+                <source src="example - video1.mp4" type="video/mp4">
+                您的浏览器不支持视频标签，请更换浏览器查看。
+            </video>
+            <div class="video - desc">这是视频1的简短描述。</div>
         </div>
-        <div class="video - actions">
-            <img src="like - icon.png" alt="点赞图标" id="likeIcon">
-            <img src="comment - icon.png" alt="评论图标" id="commentIcon">
-            <img src="share - icon.png" alt="分享图标" id="shareIcon">
+        <div class="video - item">
+            <video controls>
+                <source src="example - video2.mp4" type="video/mp4">
+                您的浏览器不支持视频标签，请更换浏览器查看。
+            </video>
+            <div class="video - desc">这是视频2的简短描述。</div>
         </div>
-    </div>
-
-    <!-- 评论弹出层（模拟） -->
-    <div id="commentSection" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border - radius: 10px; box - shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-        <h4>评论</h4>
-        <textarea rows="4" cols="30"></textarea>
-        <br>
-        <button onclick="submitComment()">提交评论</button>
-        <button onclick="closeCommentSection()">关闭</button>
-    </div>
-
-    <!-- 分享弹出层（模拟） -->
-    <div id="shareSection" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border - radius: 10px; box - shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-        <h4>分享</h4>
-        <p>分享到：</p>
-        <a href="#">微信</a>
-        <a href="#">微博</a>
-        <a href="#">QQ</a>
-        <button onclick="closeShareSection()">关闭</button>
+        <div class="video - item">
+            <video controls>
+                <source src="example - video3.mp4" type="video/mp4">
+                您的浏览器不支持视频标签，请更换浏览器查看。
+            </video>
+            <div class="video - desc">这是视频3的简短描述。</div>
+        </div>
+        <div class="video - item">
+            <video controls>
+                <source src="example - video4.mp4" type="video/mp4">
+                您的浏览器不支持视频标签，请更换浏览器查看。
+            </video>
+            <div class="video - desc">这是视频4的简短描述。</div>
+        </div>
+        <div class="video - item">
+            <video controls>
+                <source src="example - video5.mp4" type="video/mp4">
+                您的浏览器不支持视频标签，请更换浏览器查看。
+            </video>
+            <div class="video - desc">这是视频5的简短描述。</div>
+        </div>
     </div>
 </body>
 

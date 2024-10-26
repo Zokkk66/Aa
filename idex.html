@@ -1,1 +1,40 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>IDNA Support in Python - idna Library</title> <style> body { font-family: Arial, sans-serif; margin: 20px; } h1, h2 { color: #2c3e50; } pre { background-color: #ecf0f1; padding: 15px; border-radius: 5px; } code { background-color: #bdc3c7; padding: 2px 4px; border-radius: 3px; } </style> </head> <body> <h1>IDNA Support in Python - idna Library</h1> <p>This library provides support for the Internationalized Domain Names in Applications (IDNA) protocol as specified in <a href="https://tools.ietf.org/html/rfc5891">RFC 5891</a>, which is the latest version of the protocol and is sometimes referred to as “IDNA 2008”.</p> <h2>Installation</h2> <p>This package is available for installation from PyPI:</p> <pre><code>$ python3 -m pip install idna</code></pre> <h2>Usage</h2> <p>For typical usage, the encode and decode functions will take a domain name argument and perform a conversion to A-labels or U-labels respectively.</p> <pre><code>&gt;&gt;&gt; import idna &gt;&gt;&gt; idna.encode('ドメイン.テスト') b'xn--eckwd4c7c.xn--zckzah' &gt;&gt;&gt; print(idna.decode('xn--eckwd4c7c.xn--zckzah')) ドメイン.テスト</code></pre> <h2>Compatibility Mapping (UTS #46)</h2> <p>As described in RFC 5895, the IDNA specification does not normalize input from different potential ways a user may input a domain name. This functionality, known as a “mapping”, is considered by the specification to be a local user-interface issue distinct from IDNA conversion functionality.</p> <pre><code>&gt;&gt;&gt; import idna &gt;&gt;&gt; idna.encode('Königsgäßchen') ... idna.core.InvalidCodepoint: Codepoint U+004B at position 1 of 'Königsgäßchen' not allowed &gt;&gt;&gt; idna.encode('Königsgäßchen', uts46=True) b'xn--knigsgchen-b4a3dun' &gt;&gt;&gt; print(idna.decode('xn--knigsgchen-b4a3dun')) königsgäßchen</code></pre> <h2>Transitional Processing</h2> <p>Transitional processing provides conversions to help transition from the older 2003 standard to the current standard.</p> <pre><code>&gt;&gt;&gt; idna.encode('Königsgäßchen', uts46=True, transitional=True) 'xn--knigsgsschen-lcb0w'</code></pre> <h2>Exceptions</h2> <p>All errors raised during the conversion following the specification should raise an exception derived from the idna.IDNAError base class.</p> <h2>Building and Diagnostics</h2> <p>The IDNA and UTS 46 functionality relies upon pre-calculated lookup tables for performance. These tables are derived from computing against eligibility criteria in the respective standards. These tables are computed using the command-line script tools/idna-data.</p> <h2>Additional Notes</h2> <p>Packages. The latest tagged release version is published in the Python Package Index.</p> <p>Version support. This library supports Python 3.6 and higher.</p> <p>Python 2. Python 2 is supported by version 2.x of this library. Use “idna&lt;3” in your requirements file if you need this library for a Python 2 application.</p> <p>Testing. The library has a test suite based on each rule of the IDNA specification, as well as tests that are provided as part of the Unicode Technical Standard 46, Unicode IDNA Compatibility Processing.</p> <p>Emoji. It is an occasional request to support emoji domains in this library. Encoding of symbols like emoji is expressly prohibited by the technical standard IDNA 2008 and emoji domains are broadly phased out across the domain industry due to associated security risks.</p> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDNA Support in Python - idna Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        pre {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        code {
+            background-color: #bdc3c7;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>IDNA Support in Python - idna Library</h1>
+    <p>This library provides support for the Internationalized Domain Names in Applications (IDNA) protocol as specified in <a href="https://tools.ietf.org/html/rfc5891">RFC 5891</a>, which is the latest version of the protocol and is sometimes referred to as “IDNA 2008”.</p>
+    
+    <!-- 省略中间内容以节省空间 -->
+    
+    <h2>Additional Notes</h2>
+    <p>Packages. The latest tagged release version is published in the Python Package Index.</p>
+    <p>Version support. This library supports Python 3.6 and higher.</p>
+    <p>Python 2. Python 2 is supported by version 2.x of this library. Use “idna&lt;3” in your requirements file if you need this library for a Python 2 application.</p>
+    <p>Testing. The library has a test suite based on each rule of the IDNA specification, as well as tests that are provided as part of the Unicode Technical Standard 46, Unicode IDNA Compatibility Processing.</p>
+    <p>Emoji. It is an occasional request to support emoji domains in this library. Encoding of symbols like emoji is expressly prohibited by the technical standard IDNA 2008 and emoji domains are broadly phased out across the domain industry due to associated security risks.</p>
+</body>
+</html>

@@ -1,37 +1,43 @@
-// 使用事件委托处理交互元素的点击事件
-document.addEventListener('DOMContentLoaded', function () {
-    const interactionButtons = document.querySelector('.interaction - buttons');
-    const likeIcon = document.querySelector('.like - icon');
-    const watchIcon = document.querySelector('.watch - icon');
-    const commentIcon = document.querySelector('.comment - icon');
-    const shareIcons = document.querySelectorAll('.share - buttons img');
+// 点赞功能
+let isLiked = false;
+function toggleLike() {
+    const likeIcon = document.getElementById('likeIcon');
+    if (!isLiked) {
+        likeIcon.classList.add('liked');
+        isLiked = true;
+    } else {
+        likeIcon.classList.remove('liked');
+        isLiked = false;
+    }
+}
 
-    interactionButtons.addEventListener('click', function (event) {
-        if (event.target === likeIcon) {
-            // 处理点赞点击事件
-            console.log('点赞被点击');
-        } else if (event.target === watchIcon) {
-            // 处理在看点击事件
-            console.log('在看被点击');
-        } else if (event.target === commentIcon) {
-            // 处理评论点击事件
-            console.log('评论被点击');
-        } else {
-            for (let i = 0; i < shareIcons.length; i++) {
-                if (event.target === shareIcons[i]) {
-                    // 处理分享点击事件，这里可以根据不同图标做不同分享逻辑
-                    console.log('分享被点击：' + i);
-                    break;
-                }
-            }
-        }
-    });
+// 打开评论区
+function openCommentSection() {
+    const commentSection = document.getElementById('commentSection');
+    commentSection.style.display = 'block';
+}
 
-    const text = document.getElementById('color - changing - text');
-    const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
-    let index = 0;
-    setInterval(() => {
-        text.style.color = colors[index];
-        index = (index + 1) % colors.length;
-    }, 1000);
-});
+// 关闭评论区
+function closeCommentSection() {
+    const commentSection = document.getElementById('commentSection');
+    commentSection.style.display = 'none';
+}
+
+// 提交评论（模拟，这里只是简单打印）
+function submitComment() {
+    const commentText = document.querySelector('#commentSection textarea').value;
+    console.log('提交评论：' + commentText);
+    closeCommentSection();
+}
+
+// 打开分享区
+function openShareSection() {
+    const shareSection = document.getElementById('shareSection');
+    shareSection.style.display = 'block';
+}
+
+// 打开分享区
+function closeShareSection() {
+    const shareSection = document.getElementById('shareSection');
+    shareSection.style.display = 'none';
+}

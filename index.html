@@ -2,30 +2,43 @@
 <html lang="en">
 
 <head>
+    <!-- 设置字符编码为UTF - 8 -->
     <meta charset="UTF - 8">
-    <meta name="viewport" content="width=device - width, initial - scale = 1.0">
-    <title>佐罗斯爱跳舞Video</title>
+    <!-- 视口设置，确保页面在移动设备上正确显示，禁止用户缩放，设置初始缩放比例为1.0，最大最小缩放比例也为1.0 -->
+    <meta name="viewport" content="width=device - width, initial - scale = 1.0, user - scalable = no, maximum - scale = 1.0, minimum - scale = 1.0">
+    <title>佐罗斯爱跳舞</title>
+    <!-- 链接外部样式表styles.css -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <!-- 顶部导航栏 -->
     <div class="top - nav">
+        <!-- 首页链接 -->
         <a href="#">首页</a>
+        <!-- 消息链接 -->
         <a href="#">消息</a>
+        <!-- 我的页面链接 -->
         <a href="#">我</a>
+        <!-- 搜索框，用于输入搜索内容 -->
         <input type="text" class="search - box" placeholder="搜索">
+        <!-- 搜索按钮，点击可执行搜索操作 -->
         <button type="submit" class="search - btn">搜索</button>
     </div>
     <!-- 视频区域 -->
     <div class="video - container">
+        <!-- 单个视频项 -->
         <div class="video - item">
+            <!-- 视频标签，controls属性显示视频控制条 -->
             <video controls>
+                <!-- 视频源，指定视频文件类型和路径 -->
                 <source src="example - video1.mp4" type="video/mp4">
                 您的浏览器不支持视频标签，请更换浏览器查看。
             </video>
+            <!-- 视频描述，用于简短描述视频内容 -->
             <div class="video - desc">这是视频1的简短描述。</div>
         </div>
+        <!-- 单个视频项 -->
         <div class="video - item">
             <video controls>
                 <source src="example - video2.mp4" type="video/mp4">
@@ -33,6 +46,7 @@
             </video>
             <div class="video - desc">这是视频2的简短描述。</div>
         </div>
+        <!-- 单个视频项 -->
         <div class="video - item">
             <video controls>
                 <source src="example - video3.mp4" type="video/mp4">
@@ -40,6 +54,7 @@
             </video>
             <div class="video - desc">这是视频3的简短描述。</div>
         </div>
+        <!-- 单个视频项 -->
         <div class="video - item">
             <video controls>
                 <source src="example - video4.mp4" type="video/mp4">
@@ -47,6 +62,7 @@
             </video>
             <div class="video - desc">这是视频4的简短描述。</div>
         </div>
+        <!-- 单个视频项 -->
         <div class="video - item">
             <video controls>
                 <source src="example - video5.mp4" type="video/mp4">

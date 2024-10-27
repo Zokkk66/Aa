@@ -1,73 +1,124 @@
 /* 整体页面布局 */
 body {
+    /* 外边距为0，去除默认的页面外边距 */
     margin: 0;
+    /* 内边距为0，去除默认的页面内边距 */
     padding: 0;
+    /* 设置字体为Arial或者无衬线字体 */
     font - family: Arial, sans - serif;
+    /* 设置背景颜色为纯黑色 */
     background - color: #000;
+    /* 页面宽度为视口宽度的100% */
     width: 100vw;
+    /* 隐藏水平方向的滚动条 */
     overflow - x: hidden;
+    /* 确保页面高度至少为视口高度的100%，防止背景色显示不全 */
+    min - height: 100vh;
 }
 
-/* 顶部导航栏 */
+/* 顶部导航栏样式 */
 .top - nav {
+    /* 使用flex布局 */
     display: flex;
+    /* 使导航栏内的元素靠右对齐 */
     justify - content: flex - end;
+    /* 垂直方向上居中对齐元素 */
     align - items: center;
+    /* 背景颜色为黑色 */
     background - color: #000;
+    /* 文字颜色为白色 */
     color: #fff;
+    /* 内边距为15px */
     padding: 15px;
+    /* 宽度为100% */
     width: 100%;
+    /* 字体大小为18px */
     font - size: 18px;
 }
 
+/* 导航栏中的链接样式 */
 .top - nav a {
+    /* 文字颜色为白色 */
     color: #fff;
-    text - decoration: none;
+    /* 去除下划线 */
+    text --decoration: none;
+    /* 左边距为10px */
     margin - left: 10px;
 }
 
+/* 搜索框样式 */
 .top - nav.search - box {
+    /* 内边距为5px */
     padding: 5px;
+    /* 无边框 */
     border: none;
+    /* 边框圆角为5px */
     border - radius: 5px;
+    /* 背景颜色为深灰色 */
     background - color: #333;
+    /* 文字颜色为白色 */
     color: #fff;
+    /* 宽度为200px */
     width: 200px;
+    /* 右边距为10px，与搜索按钮隔开一定距离 */
     margin - right: 10px;
 }
 
+/* 搜索按钮样式 */
 .top - nav.search - btn {
+    /* 内边距上下为5px，左右为10px */
     padding: 5px 10px;
+    /* 无边框 */
     border: none;
+    /* 边框圆角为5px */
     border - radius: 5px;
+    /* 背景颜色为深灰色 */
     background - color: #333;
+    /* 文字颜色为白色 */
     color: #fff;
 }
 
-/* 视频区域 */
+/* 视频容器样式 */
 .video - container {
+    /* 使用flex布局，子元素垂直排列 */
     display: flex;
     flex - direction: column;
+    /* 子元素在垂直方向上居中对齐 */
     align - items: center;
+    /* 距离顶部20px */
     margin - top: 20px;
+    /* 宽度为100% */
     width: 100%;
 }
 
+/* 单个视频项样式 */
 .video - item {
+    /* 宽度为100% */
     width: 100%;
+    /* 底部外边距为10px */
     margin - bottom: 10px;
 }
 
+/* 视频标签样式 */
 video {
+    /* 宽度为100% */
     width: 100%;
+    /* 高度自适应 */
     height: auto;
+    /* 边框圆角为10px */
     border - radius: 10px;
+    /* 最大宽度为100%，防止视频超出容器宽度 */
     max - width: 100%;
 }
 
+/* 视频描述样式 */
 .video - desc {
+    /* 文字颜色为红色 */
     color: #f00;
+    /* 文字居中对齐 */
     text - align: center;
+    /* 距离顶部5px */
     margin - top: 5px;
+    /* 左右内边距为10px */
     padding: 0 10px;
 }

@@ -11,7 +11,7 @@ body {
 /* 顶部导航栏 */
 .top - nav {
     display: flex;
-    justify - content: space - between;
+    justify - content: flex - end;
     align - items: center;
     background - color: #000;
     color: #fff;
@@ -33,6 +33,15 @@ body {
     background - color: #333;
     color: #fff;
     width: 200px;
+    margin - right: 10px;
+}
+
+.top - nav.search - btn {
+    padding: 5px 10px;
+    border: none;
+    border - radius: 5px;
+    background - color: #333;
+    color: #fff;
 }
 
 /* 视频区域 */
@@ -57,7 +66,7 @@ video {
 }
 
 .video - desc {
-    color: #fff;
+    color: #f00;
     text - align: center;
     margin - top: 5px;
     padding: 0 10px;

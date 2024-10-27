@@ -14,6 +14,20 @@ body {
     overflow - x: hidden;
     /* 确保页面高度至少为视口高度的100%，防止背景色显示不全 */
     min - height: 100vh;
+    /* 相对定位，为白色层提供定位上下文 */
+    position: relative;
+}
+
+/* 白色层样式，创建悬浮效果 */
+.white - layer {
+    /* 绝对定位，相对于body定位 */
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 100%;
+    background - color: #fff;
+    z - index: 1;
 }
 
 /* 顶部导航栏样式 */
@@ -34,6 +48,8 @@ body {
     width: 100%;
     /* 字体大小为18px */
     font - size: 18px;
+    /* 白色层在导航栏之下，所以这里z - index要大于白色层的 */
+    z - index: 2;
 }
 
 /* 导航栏中的链接样式 */
@@ -41,7 +57,7 @@ body {
     /* 文字颜色为白色 */
     color: #fff;
     /* 去除下划线 */
-    text --decoration: none;
+    text - decoration: none;
     /* 左边距为10px */
     margin - left: 10px;
 }
@@ -87,8 +103,10 @@ body {
     align - items: center;
     /* 距离顶部20px */
     margin - top: 20px;
-    /* 宽度为100% */
-    width: 100%;
+    /* 宽度为白色层的90%，确保在白色层内 */
+    width: 90%;
+    /* 确保视频在白色层之上，z - index要大于白色层的 */
+    z - index: 2;
 }
 
 /* 单个视频项样式 */

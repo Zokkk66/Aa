@@ -15,14 +15,24 @@ body {
     align - items: center;
     background - color: #000;
     color: #fff;
-    padding: 10px;
+    padding: 15px;
     width: 100%;
+    font - size: 18px;
 }
 
 .top - nav a {
     color: #fff;
     text - decoration: none;
     margin - left: 10px;
+}
+
+.top - nav.search - box {
+    padding: 5px;
+    border: none;
+    border - radius: 5px;
+    background - color: #333;
+    color: #fff;
+    width: 200px;
 }
 
 /* 视频区域 */
@@ -50,4 +60,5 @@ video {
     color: #fff;
     text - align: center;
     margin - top: 5px;
+    padding: 0 10px;
 }

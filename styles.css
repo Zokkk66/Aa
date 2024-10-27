@@ -22,12 +22,12 @@ body {
 .white - layer {
     /* 绝对定位，相对于body定位 */
     position: absolute;
-    top: 0;
-    left: 5%;
-    width: 90%;
-    height: 100%;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
     background - color: #fff;
-    z - index: 1;
+    z - index: 2;
 }
 
 /* 顶部导航栏样式 */
@@ -48,8 +48,8 @@ body {
     width: 100%;
     /* 字体大小为18px */
     font - size: 18px;
-    /* 白色层在导航栏之下，所以这里z - index要大于白色层的 */
-    z - index: 2;
+    /* 在白色层之上，所以z - index要大于白色层的 */
+    z - index: 3;
 }
 
 /* 导航栏中的链接样式 */
@@ -60,6 +60,12 @@ body {
     text - decoration: none;
     /* 左边距为10px */
     margin - left: 10px;
+    /* 鼠标悬停时文字变色 */
+    transition: color 0.3s ease;
+}
+
+.top - nav a:hover {
+    color: #f00;
 }
 
 /* 搜索框样式 */
@@ -92,6 +98,12 @@ body {
     background - color: #333;
     /* 文字颜色为白色 */
     color: #fff;
+    /* 鼠标悬停时按钮背景色变化 */
+    transition: background - color 0.3s ease;
+}
+
+.top - nav.search - btn:hover {
+    background - color: #555;
 }
 
 /* 视频容器样式 */
@@ -103,10 +115,10 @@ body {
     align - items: center;
     /* 距离顶部20px */
     margin - top: 20px;
-    /* 宽度为白色层的90%，确保在白色层内 */
-    width: 90%;
-    /* 确保视频在白色层之上，z - index要大于白色层的 */
-    z - index: 2;
+    /* 宽度为白色层的100%，确保在白色层内 */
+    width: 100%;
+    /* 在白色层之上，所以z - index要大于白色层的 */
+    z - index: 3;
 }
 
 /* 单个视频项样式 */
@@ -115,6 +127,15 @@ body {
     width: 100%;
     /* 底部外边距为10px */
     margin - bottom: 10px;
+    /* 给视频项添加阴影效果，增强立体感 */
+    box - shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* 过渡效果，用于鼠标悬停时的动画 */
+    transition: transform 0.3s ease;
+}
+
+.video - item:hover {
+    /* 鼠标悬停时视频项稍微放大 */
+    transform: scale(1.05);
 }
 
 /* 视频标签样式 */
@@ -139,4 +160,8 @@ video {
     margin - top: 5px;
     /* 左右内边距为10px */
     padding: 0 10px;
+    /* 增加特异性以确保颜色样式生效 */
+    body.video - container.video - item.video - desc {
+        color: #f00;
+    }
 }
